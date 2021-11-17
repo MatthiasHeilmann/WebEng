@@ -11,7 +11,8 @@ DHBW Dashboard -> Wetterdaten, Stundenplanzeiten, Benutzer<->Fach/Kurs, Corona-D
 	       -> ÖPNV Warnungen, 
 Roche Mitfahrbörse -> Fahrgemeinschaften
 
-
+Projekt-E-Mail:	webengai21project@muellmail.com
+Zugang:			https://muellmail.com/#/webengai21project@muellmail.com
 
 APIs
 
@@ -27,7 +28,7 @@ ICS-interpreter (Optional):
 https://phpicalendar.net/ 
 Corona Dashboard:
 https://covid-karte.de/#197
-Wetter API:
+Wetter API: (Nutzername:webengai21project;Passwort:123456789;API-key:e543767cec1fc6ea03c70d7be741dcc7)
 https://openweathermap.org/api
 ÖPNV-Daten:
 https://opendata.rnv-online.de/datahub-api 
