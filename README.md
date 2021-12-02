@@ -14,6 +14,8 @@ Roche Mitfahrbörse -> Fahrgemeinschaften
 Projekt-E-Mail:	webengai21project@muellmail.com
 Zugang:			https://muellmail.com/#/webengai21project@muellmail.com
 
+Symbole von fontawesome: https://fontawesome.com/
+
 APIs
 
 Stock APIs:
