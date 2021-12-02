@@ -1,14 +1,177 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
     <head>
-        <title>Main</title>
-        <meta charset="UTF-8"/>
-    </head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initinal-scale=1">
+        <title>DHBW Dashboard</title>
+        
+        <link href="css/all.min.css" type="text/css" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
+    </head>
+    <!----------------------------------------------------------------------------------->
     <body>
-      <p>Hello World</p>
-      <p>Ich habe es endlich geschafft!</p>
-      <p>Noch ein Test</p>
-      <p>hallooooooo</p>
+
+        <!--Header--------------------------------->
+
+        <header>
+            <div id="logo">
+                <a href="https://www.youtube.com/watch?v=C2iK35Mtgbk" target="_blank">
+                    <img src="sources/DHBW_MA_Logo02.png" alt="logo">
+                </a>
+            </div>
+
+            <nav id="main-nav">
+                <i class="fa fa-bars"></i>
+                <ul>
+                    <a href="#home"><li>Home</li></a>
+                    <a href="#standort"><li>Standort</li></a>
+                    <a href="#dhbw-section"><li><span style="color:#eb1b2a;">DH</span>BW</li></a>
+                    <a href="#termine-section"><li>Termine</li></a>
+                    <a href="#notizen-section"><li>Notizen</li></a>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Home--------------------------------->
+
+        <section id="home">
+            <hr>
+            <h1>Dashboard</h1>
+            <h2><span style="color:#eb1b2a;">DH</span>BW Mannheim</h2> 
+            <a href="#standort">
+                <i class="fas fa-angle-down"></i>
+            </a>
+        </section>
+
+        <!--Standort--------------------------------->
+
+        <section id="standort">
+            <h3>Standort Mannheim <i class="fas fa-map-marked-alt"></i></h3>            
+            <hr>
+            <ul>    
+                    <!--SPALTE 1-->
+                <li>    
+                    <div id="eckdaten-div">
+                        <h1 id="eckdaten-h1">Eckdaten <i class="fas fa-info-circle"></i></h1> <!--Hier könnte ein kleiner Text über den DHBW Standort Mannheim stehen-->
+                        <p id="eckdaten-p">Hier könnten wir ein paar eckdaten über die DHBW Mannheim schreiben, z.B. Gründung, Bau, Studentenzahlen, usw.<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </div>
+                    <a href="https://www.dhbw.de/startseite" target="_blank">
+                        <img src="sources/DHBW_STUDENTS.jpg" alt="Students">
+                    </a>
+                </li>
+                    <!--SPALTE 2-->
+                <li>    
+                    <div id="wetter-div">
+                        <a href="https://openweathermap.org/api" target="_blank">
+                            <h1>Hier könnte das aktuelle Wetter sein</h3>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        </a>
+                    </div>
+                    <div id="oepnv-div">
+                        <a href="https://opendata.rnv-online.de/datahub-api" target="_blank">
+                            <h1>Hier könnte die aktuelle ÖPNV Lage stehen <i class="fas fa-bus"></i></h3>
+                            <p> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </a>
+                    </div>
+                </li>
+                    <!--SPALTE 3-->
+                <li>
+                    <div id="corona-div">
+                        <a href="https://covid-karte.de/#197" target="_blank">
+                            <h1>Hier könnten Corona Zahlen stehen <i class="fas fa-virus"></i></h3>
+                            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </a>
+                    </div>
+                    <div id="corona-div">
+                        <a href="https://covid-karte.de/#197" target="_blank">
+                            <h1>Und hier Aktuelle Bestimmungen an der DHBW? <i class="fas fa-head-side-mask"></i></h3>
+                            <p> Muss ja nich mit API sein?<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!--DHBW--------------------------------->
+
+        <section id="dhbw-section">
+            <h3>Über die <span style="color:#eb1b2a;">DH</span>BW <i class="fas fa-address-card"></i></h3>
+            <hr>
+            <div id="dhbw">
+                <ul>    
+                    <!--SPALTE 1-->
+                <li>    
+                    <div id="allgemeines-div">
+                        <h1 id="allgemeines-h1">Allgemeines <i class="fas fa-info-circle"></i></h1> <!--Hier könnte ein kleiner Text über den DHBW Standort Mannheim stehen-->
+                        <p id="allgemeines-p">Hier könnten paar allgemeine Fakten über die DHBW Mannheim stehen, z.B. Gründung, Standorte, Studentenzahlen, usw.<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </div>
+                    <div id="partner-div">
+                        <h1 id="partner-h1">Die Partner <i class="far fa-handshake"></i></h1> <!--Hier könnte ein kleiner Text über den DHBW Standort Mannheim stehen-->
+                        <p id="partner-p">Hier könnten Fakten über die Partner der DHBW Mannheim stehen.<br/>Wer mir verraten kann wie man die Texte hier in den divs linksbünding machen kann, obwohl die Überschrift und alles andere zentiert ist, bekommt von mir nen Döner.</p>
+                    </div>
+                </li>
+                    <!--SPALTE 2-->
+                <li>    
+                    <div id="kurs-div">
+                            <h1 id="kurs-h1">Hier könnten aktuelle Aktienkurse von den Partnern sein <i class="fas fa-chart-line"></i></h3>
+                            <p id="kurs-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </section>
+        
+        <!--termine--------------------------------->
+
+        <section id="termine-section">
+            <h3>Termine <i class="fas fa-calendar-alt"></i></h3>
+            <hr>
+
+            <div id="termine">
+                <h1>Hier ist eine Baustelle <i class="fas fa-wrench"></i></h1>
+                <img src="sources/UNDER_CONSTRUCTION.png" alt="Baustelle">
+            </div>
+        </section>
+
+        <!--notizen--------------------------------->
+
+        <section id="notizen-section">
+            <h3>Meine Notizen <i class="fas fa-clipboard"></i></h3>
+            <hr>
+
+            <h1>Hier ist eine Baustelle <i class="fas fa-wrench"></i></h1>
+            <div id="notizen">
+                <ul>
+                    <li>
+                        <form>
+                            <textarea class="input_text" tabindex="1" placeholder="Notizen"></textarea><br>
+                            <input class="button" type="submit" value="Speichern">
+                        </form>
+                    </li>
+                    <li>
+                        <img src="sources/UNDER_CONSTRUCTION.png" alt="Baustelle">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--footer--------------------------------->
+        <a href="#">
+            <div id="Seitenanfang">
+                <p>
+                    Zurück zum Seitenanfang
+                </p>
+            </div>
+        </a>
+        <footer>
+            <p>
+                &copy; M. Heilmann, L. Müller, S. Schwarz, L. Woop
+            </p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="js/mobile-menu.js"></script>
     </body>
 </html>

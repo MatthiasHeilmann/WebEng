@@ -1,0 +1,440 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Roboto';
+}
+section{min-height:100%;}
+a{text-decoration: none;}
+li{list-style-type: none;}
+h1,h2,h3,a{
+    font-weight: 500;
+    color: #494949;
+    text-transform: uppercase;
+}
+h2{color: #6e7c84;}
+h3{
+    padding-top: 8%;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+p{font-family: sans-serif;}
+hr{
+    width: 30px;
+    height: 3px;
+    /*background-color: #494949;*/
+    background-color:#eb1b2a;;
+    border: 0;
+    margin: 0 auto 40px auto;
+}
+.fa-bars{display: none;}
+img,li, #Seitenanfang, #logo, .fa-bars,.fa-angle-down,#standort div,#dhbw div{transition: all 300ms;-webkit-transition: all 300ms;-moz-transition: all 300ms;-o-transition: all 300ms}
+
+/* HEADER ********************/
+
+header{
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 1px 3px lightgray;
+    z-index: 1;
+}
+#logo{
+    width: 140px;
+    float: left;
+    margin: 10px 0 0 50px;
+}
+#logo:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+#logo img{
+    width: 200%;
+}
+header nav{
+    float: right;
+    margin: 10px 50px 0 0;
+}
+header nav ul li{
+    float: left;
+    margin-right: 25px;
+}
+header nav ul li a{
+    font-size: 16px;
+}
+header nav ul li:hover{
+    padding-top: 3px;
+    opacity: 0.9;
+    text-decoration: underline;
+}
+
+/* HOME ********************/
+
+#home{
+    background: url(../sources/DHBW_MA_Campus.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#home h1{
+    margin: 240px auto 0 auto;
+    font-size: 100px;
+}
+#home h2{
+    margin: 0 auto 0 auto;
+    font-size: 50px;
+}
+.fa-angle-down{
+    font-size: 35px;
+    margin: 20px auto 0 auto;
+}
+.fa-angle-down:hover{
+    opacity: 0.7;
+}
+
+/* STANDORT ********************/
+
+#standort{
+    width: 90%;
+    margin: 0 auto 0 auto;
+}
+#standort p{
+    text-align: left;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+    text-transform: none;
+}
+#eckdaten-h1{
+    font-size: 25px;
+}
+#standort ul li{
+    width: 33.3%;
+    float: left;
+    margin-bottom: 10px;
+}
+#standort ul li div{
+    height: auto;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 15px;
+    background-color:#f0f0f0;
+}
+#standort img{
+    width: 90%;
+    height: auto;
+    margin: 20px 20px 20px 20px;
+    border-radius: 15px;
+    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.3);
+}
+#standort div{
+    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.3);
+}
+#standort div:hover,#standort img:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* DHBW ********************/
+
+#dhbw-section{
+    background-color: #f0f0f0  ;
+}
+#dhbw{
+    background-color: #f0f0f0;
+    margin: 0 auto 0 auto;
+    width: 90%;
+}
+#dhbw p{
+    text-align: left;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+    text-transform: none;
+}
+#allgemeines-h1{
+    font-size: 25px;
+}
+#allgemeines-p{
+    margin: 0 auto 0 auto;
+}
+#dhbw ul li{
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+}
+#dhbw ul li div{
+    height: auto;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 25px 20px 25px;
+    border-radius: 15px;
+    background-color:white;
+    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.3);
+}
+#dhbw div:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* TERMINE ********************/
+
+#termine img{
+    height: 350px;
+    width: auto;
+}
+
+/* NOTIZEN ********************/
+
+#notizen-section{
+    background-color: #f0f0f0;
+}
+#notizen{
+    background-color: #f0f0f0;
+    margin: 0 auto 0 auto;
+    width: 90%;
+}
+#notizen ul li{
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+}
+#notizen img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+textarea{
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border: 2px solid;
+    border-color: #494949;
+    outline: none;
+    border-radius: 5px;
+}
+form textarea{
+    width: 95%;
+    height: 200px;
+    resize: none;
+}
+.input_text{
+    color: #494949;
+
+}
+::-webkit-input-placeholder{color:#999999}
+::-moz-placeholder{color: #999999;}
+:-ms-input-placeholder{color: #999999;}
+:-moz-placeholder{color: #999999;}
+
+.button{
+    background-color: #f0f0f0;
+    color: #494949;
+    width: 95%;
+    height: 50px;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: #494949;
+    color: #f0f0f0;
+}
+
+/* FOOTER ********************/
+
+#Seitenanfang{
+    background-color:rgba(110, 124, 132, 0.8) ;
+    height: 50px;
+}   
+#Seitenanfang:hover{
+    background-color: rgba(110, 124, 132, 0.9);
+}
+#Seitenanfang p{
+    color: rgba(255,255,255, 1);
+    /*color: #494949;*/
+    text-transform: none;
+    padding-top: 17px;
+    margin-top: 0;
+}
+footer{
+    text-transform: none;
+    background-color:rgb(110, 124, 132) ;
+    height: 140px;
+}
+footer p{
+    padding-top: 30px;
+    color: rgba(255,255,255, 1);
+    margin: 0 auto 0 auto;
+}
+
+/* Media QUERIES ******************************/
+
+/* TABLETS */
+
+@media screen and (max-width:1024px){
+    
+    h3{
+        padding-top: 12%;
+    }
+    /* HEADER */
+
+    header{
+        height: auto;
+    }
+    #logo{
+        width: 100px;
+        margin-top: 5px;
+    }
+    header nav{
+        margin-top: 0;
+    }
+    header nav ul li{
+        font-size: 12px;
+    }
+
+    /* HOME */
+
+    #home h1{
+        font-size: 90px;
+        margin-top: 200px ;
+    }
+    #home h2{
+        font-size: 22px;
+    }
+    #about p{
+        width: 80%;
+    }
+    /* STANDORT */
+    #standort{
+        width: auto;
+        height: auto;
+    }
+    #standort div,#standort img{
+        margin:auto;
+    }
+    #standort ul li{
+        width: 100%;
+        float: none;
+    }
+    #standort ul li:last-child{
+        padding-bottom: 10%;
+    }
+    #standort div:hover,#standort img:hover{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        box-shadow: 4px 10px 10px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* DHBW */
+    
+    #dhbw-section{
+        width: auto;
+        height: auto;
+    }
+    #dhbw-section div{
+        margin:auto;
+    }
+    #dhbw ul li{
+        width: 100%;
+        float: none;
+    }
+    #standort ul li:last-child{
+        padding-bottom: 10%;
+    }
+    #dhbw div:hover,#dhbw img:hover{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        box-shadow: 4px 10px 10px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* TERMINE */
+    
+    /* Notizen */
+    
+    form input, form textarea{
+        width: 60%;
+    }
+    .button{
+        width: 62%;
+    }
+
+}
+
+/* HANDY */
+
+@media screen and (max-width:580px){
+    #logo{
+        width: 130px ;
+        margin-left: 30px;
+    }
+    header nav{
+        float: none;
+        margin: 0;
+    }
+    .fa-bars{
+        font-size: 17px;
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        margin: -34px 30px 0 0;
+        text-align: right; 
+        float: right;
+    }
+    .fa-bars:hover{
+        opacity: 0.5;
+    }
+    header nav ul{
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    header nav ul.open_nav_bar{
+        height: auto;
+    }
+    header nav ul li{
+        width: 100%;
+        padding: 5px 0;
+        margin: 0;
+        font-size: 11px;
+        border-top: 1px solid #dddddd;
+    }
+    header nav ul li:hover{
+        background-color: #eeeeee;
+        padding-top: 5px;
+    }
+    #home h1{
+        font-size: 60px;
+        margin-top: 200px;
+    }
+    #home h2{
+        width: 70%;
+        height: auto;
+    }
+    #about img{
+        width: 70%;
+        height: auto;
+    }
+    form input, form textarea{
+        width: 70%;
+    }
+    .button{
+        width: 72%;
+    }
+}
