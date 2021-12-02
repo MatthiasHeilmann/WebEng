@@ -113,6 +113,9 @@ header nav ul li:hover{
 #eckdaten-h1{
     font-size: 25px;
 }
+#standort ul{
+    padding:0;
+}
 #standort ul li{
     width: 33.3%;
     float: left;
@@ -151,8 +154,11 @@ header nav ul li:hover{
 }
 #dhbw{
     background-color: #f0f0f0;
-    margin: 0 auto 0 auto;
     width: 90%;
+    margin: 0 auto 0 auto;
+}
+#dhbw ul{
+    padding: 0;
 }
 #dhbw p{
     text-align: left;
@@ -204,6 +210,9 @@ header nav ul li:hover{
     background-color: #f0f0f0;
     margin: 0 auto 0 auto;
     width: 90%;
+}
+#notizen ul{
+    padding: 0;
 }
 #notizen ul li{
     width: 50%;
@@ -377,7 +386,7 @@ footer p{
 
 /* HANDY */
 
-@media screen and (max-width:580px){
+@media screen and (max-width:700px){
     #logo{
         width: 130px ;
         margin-left: 30px;
@@ -419,22 +428,17 @@ footer p{
         background-color: #eeeeee;
         padding-top: 5px;
     }
+    #termine img{
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* Jetzt wirklich HANDY*/
+
+@media screen and (max-width:560px){
     #home h1{
-        font-size: 60px;
-        margin-top: 200px;
+        font-size: 40px;
     }
-    #home h2{
-        width: 70%;
-        height: auto;
-    }
-    #about img{
-        width: 70%;
-        height: auto;
-    }
-    form input, form textarea{
-        width: 70%;
-    }
-    .button{
-        width: 72%;
-    }
+    
 }
