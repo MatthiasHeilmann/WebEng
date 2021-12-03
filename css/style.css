@@ -149,9 +149,6 @@ header nav ul li:hover{
 #wetter-div h1{
     margin-bottom: 10px;
 }
-#weather-report{ 
-    margin: 23px 10% 20px auto;
-}
 #weather-api-icon{
     width: 50px;
     height: auto;
@@ -161,6 +158,17 @@ header nav ul li:hover{
 span.tmax{
     text-align: right;
     line-height: 40px;
+}
+#weather-report{
+    color: #6e7c84;
+    font-weight: normal;
+    margin: 23px 10% 20px 20%;
+}
+#weather-api-description,#temp{
+    font-weight: 600;
+}
+#temp{
+    color: #eb1b2a;
 }
 
 
@@ -346,7 +354,7 @@ footer p{
         width: auto;
         height: auto;
     }
-    #standort div,#standort img{
+    #standort div,#students-img{
         margin:auto;
     }
     #standort ul li{
@@ -356,12 +364,18 @@ footer p{
     #standort ul li:last-child{
         padding-bottom: 10%;
     }
-    #standort div:hover,#standort img:hover{
+    #standort div:hover,#students-img:hover{
         transform: scale(1);
         -webkit-transform: scale(1);
         -moz-transform: scale(1);
         -o-transform: scale(1);
         box-shadow: 4px 10px 10px 10px rgba(0, 0, 0, 0.3);
+    }
+    #weather-api-icon{
+        display: none;
+    }
+    #weather-report{
+        margin-right: 0;
     }
     
     /* DHBW */
