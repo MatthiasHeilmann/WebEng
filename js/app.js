@@ -12,9 +12,7 @@ async function loadScedule(){
 
     var response = await fetch(corsAPI + tempAPI);
 
-    var sceduleICS = await response.blob();
-
-    console.log(sceduleICS);
+    var sceduleICS = await response.text();
 
     var sceduleDiv = document.getElementById("scedule-container");
     sceduleDiv.innerHTML = getSceduleTabel(sceduleICS);
@@ -23,7 +21,7 @@ async function loadScedule(){
 // Analyses the sceduleICS (as text) and returns HTML-Code that forms a table including the current weeks scedule
 async function getSceduleTabel(sceduleICS){
     //return "Display table content here";
-    return JSON.stringify(parseJSON(await sceduleICS.text()), null, "<br>&nbsp;&nbsp;");
+    return JSON.stringify(parseJSON(sceduleICS), null, "<br>");
 }
 
 function setCourseID(id){
@@ -57,5 +55,6 @@ function parseJSON(sceduleICS){
         }
     }
 
+    console.log(sceduleLessons);
     return sceduleLessons;
 }
