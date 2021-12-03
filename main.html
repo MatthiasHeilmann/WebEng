@@ -18,7 +18,7 @@
 
         <header>
             <div id="logo">
-                <a href="https://www.youtube.com/watch?v=C2iK35Mtgbk" target="_blank">
+                <a href="https://www.mannheim.dhbw.de/startseite" target="_blank">
                     <img src="sources/DHBW_MA_Logo02.png" alt="logo">
                 </a>
             </div>
@@ -56,7 +56,10 @@
                 <li>    
                     <div id="eckdaten-div">
                         <h1 id="eckdaten-h1">Eckdaten <i class="fas fa-info-circle"></i></h1> <!--Hier könnte ein kleiner Text über den DHBW Standort Mannheim stehen-->
-                        <p id="eckdaten-p">Hier könnten wir ein paar eckdaten über die DHBW Mannheim schreiben, z.B. Gründung, Bau, Studentenzahlen, usw.<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        <p><b>   6000+ Studierende</b></p>
+                        <p><b>   350+ Mitarbeiter</b></p>
+                        <p><b>   45+ Studienrichtungen</b></p>
+                        <p><b>   2000+ Partnerunternehmen</b></p>
                     </div>
                     <a href="https://www.dhbw.de/startseite" target="_blank">
                         <img src="sources/DHBW_STUDENTS.jpg" alt="Students">
@@ -66,31 +69,31 @@
                 <li>    
                     <div id="wetter-div">
                         <a href="https://openweathermap.org/api" target="_blank">
-                            <h1>Hier könnte das aktuelle Wetter sein</h3>
+                            <h1>Hier könnte das aktuelle Wetter sein</h1>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                         </a>
                     </div>
                     <div id="oepnv-div">
                         <a href="https://opendata.rnv-online.de/datahub-api" target="_blank">
-                            <h1>Hier könnte die aktuelle ÖPNV Lage stehen <i class="fas fa-bus"></i></h3>
+                            <h1>Hier könnte die aktuelle ÖPNV Lage stehen <i class="fas fa-bus"></i></h1>
                             <p> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                         </a>
                     </div>
                 </li>
                     <!--SPALTE 3-->
                 <li>
-                    <div id="corona-div">
-                        <a href="https://covid-karte.de/#197" target="_blank">
-                            <h1>Hier könnten Corona Zahlen stehen <i class="fas fa-virus"></i></h3>
-                            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                        </a>
-                    </div>
-                    <div id="corona-div">
-                        <a href="https://covid-karte.de/#197" target="_blank">
-                            <h1>Und hier Aktuelle Bestimmungen an der DHBW? <i class="fas fa-head-side-mask"></i></h3>
-                            <p> Muss ja nich mit API sein?<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                        </a>
-                    </div>
+
+    <!-- START Anzeige der Corona-Ampel -->
+    <div style="height:300px">
+        <h2>Corona-Ampel für den <span id="anzeigeLandkreisname"></span></h2>
+        7-Tage-Inzidenzwert im <span id="anzeigeLandkreisname" class="fett"></span><br/>
+        <span class="kursiv kleiner">Stand: <span id="anzeigeLetztesUpdate"></span> (Robert-Koch-Institut (RKI), <a href="https://www.govdata.de/dl-de/by-2-0" target="_blank" title="Lizenz: Datenlizenz Deutschland – Namensnennung – Version 2.0" class="lizenzLink">dl-de/by-2-0</a>)<br></span>
+            <span id="anzeige7TageInzidenzWert" style="color: red; font-weight: bold"></span>    
+    </span>
+        <p></p>
+        <div id="farbverlauf" style="width:70%;height:50px;margin: 0 auto;position: relative;" class="farbverlauf">
+            </div>  
+    <!-- ENDE Anzeige der Corona-Ampel -->
                 </li>
             </ul>
         </section>
@@ -139,7 +142,7 @@
         <!--notizen--------------------------------->
 
         <section id="notizen-section">
-            <h3>Meine Notizen <i class="fas fa-clipboard"></i></h3>
+            <h3>Schwarzes Brett <i class="fas fa-clipboard"></i></h3>
             <hr>
 
             <h1>Hier ist eine Baustelle <i class="fas fa-wrench"></i></h1>
@@ -147,7 +150,7 @@
                 <ul>
                     <li>
                         <form>
-                            <textarea class="input_text" tabindex="1" placeholder="Notizen"></textarea><br>
+                            <textarea class="input_text" tabindex="1" placeholder="Schwarzes Brett"></textarea><br>
                             <input class="button" type="submit" value="Speichern">
                         </form>
                     </li>
@@ -173,5 +176,6 @@
         </footer>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <script src="js/mobile-menu.js"></script>
+        <script src="js/corona-api.js"></script>
     </body>
 </html>
