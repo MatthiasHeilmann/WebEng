@@ -14,6 +14,13 @@ Roche Mitfahrbörse -> Fahrgemeinschaften
 Projekt-E-Mail:	webengai21project@muellmail.com
 Zugang:			https://muellmail.com/#/webengai21project@muellmail.com
 
+MongoDB Atlas Zugang: 	MatthiasHeilmann@hotmail.com
+						RocheAI21
+						(fragt mich nicht wies dazu gekommen ist...)
+
+Cluster0	|	Username: webeng	|	Password:	ai21
+Connection:		mongodb+srv://webeng:ai21@cluster0.utsfr.mongodb.net/test
+
 Symbole von fontawesome: https://fontawesome.com/
 
 APIs
