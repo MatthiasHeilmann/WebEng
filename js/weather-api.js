@@ -8,7 +8,7 @@ $.getJSON(
         var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
         var weather = data.weather[0].description;
         var temp = Math.floor(data.main.temp);
-        $("#weather-api-icon").attr('src',icon);
+        $("#weather-api-icon").attr("src",icon);
         $("#weather-api-description").append(weather);
         $(".temp").append(temp);
 });
