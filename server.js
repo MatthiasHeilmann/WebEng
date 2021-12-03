@@ -17,7 +17,7 @@ app.use(express.static(__dirname));
 app.use(express.json());
 
 app.get('/' , (req, res) => {
-    res.sendFile('/main.html');
+    res.sendFile('/scedule.html');
 });
 /*
 app.get('/mongoTest', (rep, res) => {
