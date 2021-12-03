@@ -17,13 +17,13 @@ async function loadScedule(){
     console.log(sceduleICS);
 
     var sceduleDiv = document.getElementById("scedule-container");
-    sceduleDiv.innerHTML = getSceduleTabel;
+    sceduleDiv.innerHTML = getSceduleTabel(sceduleICS);
 }
 
 // Analyses the sceduleICS (as text) and returns HTML-Code that forms a table including the current weeks scedule
 async function getSceduleTabel(sceduleICS){
     //return "Display table content here";
-    return JSON.stringify(parseJSON(await sceduleICS.text()), null, "<br>");
+    return JSON.stringify(parseJSON(await sceduleICS.text()), null, "<br>&nbsp;&nbsp;");
 }
 
 function setCourseID(id){
