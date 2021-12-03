@@ -10,5 +10,5 @@ $.getJSON(
         var temp = Math.floor(data.main.temp);
         $("#weather-api-icon").attr("src",icon);
         $("#weather-api-description").append(weather);
-        $(".temp").append(temp);
+        $("#weather-api-temp").append(temp);
 });
