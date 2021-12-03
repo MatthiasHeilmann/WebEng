@@ -398,7 +398,7 @@ footer p{
     }
     .fa-bars{
         font-size: 17px;
-        display: inline-block;
+        display: block;
         width: 100%;
         cursor: pointer;
         margin: -34px 30px 0 0;
