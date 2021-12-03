@@ -25,9 +25,15 @@ hr{
     width: 30px;
     height: 3px;
     /*background-color: #494949;*/
-    background-color:#eb1b2a;;
+    background-color:#eb1b2a;
     border: 0;
     margin: 0 auto 40px auto;
+}
+.big{
+    font-weight: 600;
+}
+.red{
+    color: #eb1b2a;
 }
 .fa-bars{display: none;}
 img,li, #Seitenanfang, #logo, .fa-bars,.fa-angle-down,#standort div,#dhbw div{transition: all 300ms;-webkit-transition: all 300ms;-moz-transition: all 300ms;-o-transition: all 300ms}
@@ -129,7 +135,7 @@ header nav ul li:hover{
     border-radius: 15px;
     background-color:#f0f0f0;
 }
-#standort img{
+#students-img{
     width: 90%;
     height: auto;
     margin: 20px 20px 20px 20px;
@@ -139,12 +145,36 @@ header nav ul li:hover{
 #standort div{
     box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.3);
 }
-#standort div:hover,#standort img:hover{
+#standort div:hover,#students-img:hover{
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
     box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.3);
+}
+#wetter-div h1{
+    margin-bottom: 10px;
+}
+#weather-api-icon{
+    width: 50px;
+    height: auto;
+    float: left;
+    padding: 0 0 0 10%;
+}
+span.tmax{
+    text-align: right;
+    line-height: 40px;
+}
+#weather-report{
+    color: #6e7c84;
+    font-weight: normal;
+    margin: 23px 10% 20px 20%;
+}
+#weather-api-description,#temp{
+    font-weight: 600;
+}
+#temp{
+    color: #eb1b2a;
 }
 
 #standort .farbverlauf {
@@ -338,7 +368,7 @@ footer p{
         width: auto;
         height: auto;
     }
-    #standort div,#standort img{
+    #standort div,#students-img{
         margin:auto;
     }
     #standort ul li{
@@ -348,12 +378,18 @@ footer p{
     #standort ul li:last-child{
         padding-bottom: 10%;
     }
-    #standort div:hover,#standort img:hover{
+    #standort div:hover,#students-img:hover{
         transform: scale(1);
         -webkit-transform: scale(1);
         -moz-transform: scale(1);
         -o-transform: scale(1);
         box-shadow: 4px 10px 10px 10px rgba(0, 0, 0, 0.3);
+    }
+    #weather-api-icon{
+        display: none;
+    }
+    #weather-report{
+        margin-right: 0;
     }
     
     /* DHBW */
