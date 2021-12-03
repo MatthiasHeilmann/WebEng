@@ -24,6 +24,6 @@ app.get('/mongoTest', (rep, res) => {
     res.sendFile('/mongoTest.html');
 });
 
-app.post('/mognoUpload', (req, res) => {
+app.post('/mongoUpload', (req, res) => {
     // Upload req.body to mongoDB 
 });
