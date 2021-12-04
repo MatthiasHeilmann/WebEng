@@ -1,6 +1,6 @@
-var landkreisObjectId = '197'; //Default Wert... Angabe der Landkreis OBJECTID -> 239 = Landkreis München
+var landkreisObjectId = '197';
         
-        // Ab hier keine Aenderung erforderlich
+        
         var HttpClient = function() {
             this.get = function(request, callback) {
                 var httpRequest = new XMLHttpRequest();

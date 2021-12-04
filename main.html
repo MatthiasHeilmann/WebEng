@@ -54,64 +54,71 @@
             <ul>    
                     <!--SPALTE 1-->
                 <li>    
+                    <!-- ECKDATEN ÜBER DIE DHBW MANNHEIM ------------------------------->
                     <div id="eckdaten-div">
-                        <h1 id="eckdaten-h1">Eckdaten <i class="fas fa-info-circle"></i></h1> <!--Hier könnte ein kleiner Text über den DHBW Standort Mannheim stehen-->
+                        <h1 id="eckdaten-h1">
+                            <a class="link" href="https://www.mannheim.dhbw.de/dhbw-mannheim/ueber-uns/dhbw-mannheim" target="_blank">
+                                Eckdaten</a> <i class="fas fa-info-circle"></i>
+                        </h1>
                         <p><b>   6000+ Studierende</b></p>
                         <p><b>   350+ Mitarbeiter</b></p>
                         <p><b>   45+ Studienrichtungen</b></p>
                         <p><b>   2000+ Partnerunternehmen</b></p>
                     </div>
+                    <!-- EIN SEHR SCHÖNES BILD VON STUDIERENDEN ------------------------>
                     <a href="https://www.dhbw.de/startseite" target="_blank">
                         <img id="students-img" src="sources/DHBW_STUDENTS.jpg" alt="Students">
                     </a>
                 </li>
                     <!--SPALTE 2-->
                 <li>    
+                    <!-- AKTUELLES WETTER IN MANNHEIM ---------------------------------->
                     <div id="wetter-div">
-                        <a href="https://openweathermap.org/api" target="_blank">
-                            <h1>Aktuelles Wetter in Mannheim</h3>
-                            <!--<a href="#">Hamburg</a>
-                            <span class="tmax">3 °C</span>
+                            <h1><a class="link" href="https://www.wetter.com/deutschland/mannheim/DE0006670.html" target="_blank">
+                                Aktuelles Wetter in Mannheim</a>
+                            </h3>
                             <img id="weather-api-icon">
-                            -->
-                            <img id="weather-api-icon">
-                            <h4 id="weather-report">In Mannheim ist es
+                            <h4 id="weather-report">
                                 <span id="weather-api-description"></span>
                                 bei
                                 <span id="temp"><span id="weather-api-temp"></span>°C</span>.
                             </h4>
-
-                        </a>
                     </div>
-                    <div style="height:300px"><!-- START Anzeige der Corona-Ampel -->
-                        <h2>Corona-Ampel für den <span id="anzeigeLandkreisname"></span></h2>
-                        7-Tage-Inzidenzwert im 
-                        <span id="anzeigeLandkreisname" class="fett"></span><br/>
-                        <span class="kursiv kleiner">Stand: <span id="anzeigeLetztesUpdate"></span> (Robert-Koch-Institut (RKI))<br></span>
+                    <!-- CORONA ZAHLEN UND AMPEL FÜR SK MANNHEIM ----------------------->
+                    <div style="height:280px">
+                        <a class="link" href="https://experience.arcgis.com/experience/478220a4c454480e823b17327b2bf1d4/page/page_1/" target="_blank">
+                            <h1>Corona-Ampel für den <span id="anzeigeLandkreisname"></span></a>
+                            <i class="fas fa-viruses"></i>
+                        </h1>
+                            7-Tage-Inzidenzwert im 
+                            <span id="anzeigeLandkreisname" class="fett"></span>:<br/>
+                        
                         <span id="anzeige7TageInzidenzWert" style="color: red; font-weight: bold"></span>
-                        <p></p>
-
-                        <div id="farbverlauf" style="width:70%;height:50px;margin: 0 auto;position: relative;" class="farbverlauf"><!--CORONA AMPEL-->
+                                <!-- START Anzeige der Corona-Ampel -->
+                        <div id="farbverlauf" style="width:70%;height:50px;margin: 10px auto;position: relative;" class="farbverlauf"><!--CORONA AMPEL-->
                         </div>  <!-- ENDE Anzeige der Corona-Ampel -->
+                        <span id="inzidenz_stand">Stand: <span id="anzeigeLetztesUpdate"></span> (Robert-Koch-Institut)<br></span>
                     </div>
                 </li>
                     <!--SPALTE 3-->
                 <li>
+                    <!-- AKTUELLE LAGE DES ÖPNV ------------------------------------------->
                     <div id="oepnv-div">
-                        <a href="https://opendata.rnv-online.de/datahub-api" target="_blank">
-                            <h1>Hier könnte die aktuelle ÖPNV Lage stehen <i class="fas fa-bus"></i></h1>
+                        <a class="link" href="https://opendata.rnv-online.de/datahub-api" target="_blank">
+                            <h1>Hier könnte die aktuelle ÖPNV Lage stehen</a> 
+                                <i class="fas fa-bus"></i></h1>
                             <p> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                        </a>
                     </div>
+                    <!-- DIE AKTUELLEN BESTIMMUNGEN AN DER DHBW MANNHEIM ------------------->
                     <div id="corona-div">
-                        <a href="https://covid-karte.de/#197" target="_blank">
-                            <h1>Aktuelle Bestimmungen an der <span class="red">DH</span>BW<i class="fas fa-head-side-mask"></i></h3>
+                        <a class="link" href="https://www.mannheim.dhbw.de/corona-informationen/zutritt-campus" target="_blank">
+                            <h1>Aktuelle Bestimmungen an der <span class="red">DH</span>BW</a>
+                                <i class="fas fa-head-side-mask"></i></h3>
                             <p> Die Teilnahme an der Präsenzlehre ist ab Montag, 29. November 2021 nur noch
                                 für Studierende erlaubt, die einen <span class="big">2G-Nachweis</span> erbracht haben oder vorlegen können. Für nicht-immunisierte Studierende wird die <span class="red">DH</span>BW Mannheim die Studierfähigkeit des Studiums sicherstellen, indem sie auf Lehrmaterialien zum Selbststudium verweist bzw. anbietet. Nach Rücksprache mit den Lehrenden kann ggf. auch
                                 eine Online-Zuschaltung ermöglicht werden.
                             </br>Bei Prüfungen, besonderen zwingend vorgeschriebenen Laborveranstaltungen
                                 und in der Bibliothek sowie in der Mensa gilt die <span class="big">3G-Regel</span>.  </p>
-                        </a>
                     </div>
                 </li>
             </ul>

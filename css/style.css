@@ -35,6 +35,9 @@ hr{
 .red{
     color: #eb1b2a;
 }
+.link:hover{
+    text-decoration: underline;
+}
 .fa-bars{display: none;}
 img,li, #Seitenanfang, #logo, .fa-bars,.fa-angle-down,#standort div,#dhbw div{transition: all 300ms;-webkit-transition: all 300ms;-moz-transition: all 300ms;-o-transition: all 300ms}
 
@@ -176,13 +179,15 @@ span.tmax{
 #temp{
     color: #eb1b2a;
 }
-
 #standort .farbverlauf {
     background-image: linear-gradient(90deg, green 20%, yellow 33%, yellow 33%, yellow 48%, red 75%); 
 }
-
 #standort .farbverlauf_ext {
     background-image: linear-gradient(90deg, green 20%, yellow 33%, yellow 33%, yellow 48%, red 75%, red 80.9%, white 81%, white 82%, red 82.1%, red 83%, white 83.1%, white 84%, red 84.1%, red 85%, white 85.1%, white 86%, red 86.1%, rgb(150, 0, 0) 95%); 
+}
+#inzidenz_stand{
+    color: #494949;
+    font-size: 10px;
 }
 
 
