@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initinal-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>DHBW Dashboard</title>
         
         <link href="css/all.min.css" type="text/css" rel="stylesheet">
@@ -140,7 +140,8 @@
                 <li>    
                     <div id="kurs-div">
                             <h1 id="kurs-h1">Hier könnten aktuelle Aktienkurse von den Partnern sein <i class="fas fa-chart-line"></i></h3>
-                            <p id="kurs-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <canvas id="myChart" width="15" height="8"></canvas>
+                            <p id="kurs-p">DEMO KURS</p>
                     </div>
                 </li>
             </ul>
@@ -194,10 +195,16 @@
                 &copy; M. Heilmann, L. Müller, S. Schwarz, L. Woop
             </p>
         </footer>
+        <script>
+            var datapoints=[];
+            var alphabetize=[];
+        </script>
+        <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.1/chart.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <script src="js/mobile-menu.js"></script>
         <script src="js/corona-api.js"></script>
         <script src="js/weather-api.js"></script>
+        <script type="module" src="js/StockdataviaHttpClient.js"></script>
 
     </body>
 </html>
