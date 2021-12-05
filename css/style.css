@@ -179,16 +179,24 @@ span.tmax{
 #temp{
     color: #eb1b2a;
 }
+/* AMPEL */
+#farbverlauf{
+    width:70%;height:50px;margin: 10px 10%;position: relative;
+}
 #standort .farbverlauf {
     background-image: linear-gradient(90deg, green 20%, yellow 33%, yellow 33%, yellow 48%, red 75%); 
 }
 #standort .farbverlauf_ext {
     background-image: linear-gradient(90deg, green 20%, yellow 33%, yellow 33%, yellow 48%, red 75%, red 80.9%, white 81%, white 82%, red 82.1%, red 83%, white 83.1%, white 84%, red 84.1%, red 85%, white 85.1%, white 86%, red 86.1%, rgb(150, 0, 0) 95%); 
 }
+#anzeige7TageInzidenzWert{
+    color: red; font-weight: bold;
+}
 #inzidenz_stand{
     color: #494949;
     font-size: 10px;
 }
+/* AMPEL ENDE */
 
 
 /* DHBW ********************/
