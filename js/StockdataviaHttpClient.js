@@ -9,7 +9,7 @@ function convertdata(datensatz){
     }
     alphabetize.sort();
     //console.log(alphabetize);
-    for(let i=0;i</*datensatz.length()*/1100;i++){
+    for(let i=0;i<alphabetize.length;i++){
         newdata.push(datensatz["Weekly Adjusted Time Series"][alphabetize[i]]["2. high"])
     }
     //console.log(newdata);
@@ -30,10 +30,10 @@ var HttpClient = function() {
     }
 }
 
-//Instantiation of HttpClient & API Call
+//Instantiation of HttpClient & API Call RHO6.FRK=Roche, Max 5 calls per minute
 
 var client = new HttpClient();
-var StocksUrl = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=IBM&apikey=demo';
+var StocksUrl = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=RHO6.FRK&apikey=61EK505FXBJ59YGC';
 client.get(StocksUrl, function(response) {
     var jsonfulldata = JSON.parse(response);
     //console.log(jsonfulldata)
@@ -50,12 +50,12 @@ client.get(StocksUrl, function(response) {
         data: {
             labels: alphabetize,
             datasets: [{
-                label: 'Stock Price',
+                label: 'Stock Price of Roche Holding AG',
                 data: datapoints,
                 borderColor: 
-                    'rgba(235, 27, 42, 0.2)',
+                    'rgba(235, 27, 42, 0.8)',
                 hoverBorderColor:
-                    'rgba(235, 27, 42, 0.6)',
+                    'rgba(235, 27, 42, 0.3)',
                 tension: 0.1
             }]
         },
@@ -63,7 +63,7 @@ client.get(StocksUrl, function(response) {
             scales: {
                 y: {
                     beginAtZero: true,
-                    max:250
+                    max: datapoints.max
                 }
                 
             }

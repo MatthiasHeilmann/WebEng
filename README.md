@@ -20,6 +20,9 @@ APIs
 
 Stock APIs:
 https://www.alphavantage.co/
+
+Unser Stock API-Key: 61EK505FXBJ59YGC
+
 Tankstellen APIs:
 https://creativecommons.tankerkoenig.de/
 Duale Partner DHBW:
