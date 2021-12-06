@@ -3,6 +3,8 @@ const sceduleAPI = 'https://vorlesungsplan.dhbw-mannheim.de/ical.php';
 // Complete with course id
 var sceduleAPIParams = '?date=';
 
+loadScedule();
+
 async function loadScedule(){
     // temporär bis man den scheiß mit Cors gefixt hat. 
     // Schaltet ne CORS-Anywhere Demo als Origin für den API aufruf zwischen
@@ -14,9 +16,7 @@ async function loadScedule(){
 
     var sceduleICS = await response.blob();
 
-    console.log(sceduleICS);
-
-    var sceduleDiv = document.getElementById('scedule-container');
+    var sceduleDiv = document.getElementById('termine');
     getSceduleTabel(await sceduleICS.text(), 0);
 }
 
@@ -33,7 +33,7 @@ function getSceduleTabel(sceduleICS, offset){
         sceduleContentJson = JSON.parse(sessionStorage.getItem("sceduleJson"));
     }
 
-    var sceduleDiv = document.getElementById('scedule-container');
+    var sceduleDiv = document.getElementById('termine');
     var theadTr = sceduleDiv.querySelector('thead').querySelector('tr');
     var tbody = sceduleDiv.querySelector('tbody');
     var weekdays = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
@@ -59,7 +59,6 @@ function getSceduleTabel(sceduleICS, offset){
         var currScedule = sceduleContentJson[iDay.toJSON().slice(0,10).replace(/-/g,'')];
         // Only if the current day has any information
         if(currScedule){
-            console.log("Max scedule: " + maxSceduleLength);
             // Inster header containing the current day ("day", DD.MM)
             var theadTh = document.createElement('th');
             theadTh.setAttribute('class', 'tg-ul38');

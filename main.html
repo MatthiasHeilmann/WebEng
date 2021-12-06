@@ -160,10 +160,24 @@
         <section id="termine-section">
             <h3>Termine <i class="fas fa-calendar-alt"></i></h3>
             <hr>
-
+            <i class="fa fa-refresh" aria-hidden="true" onclick="loadScedule()"></i>
+            <button onclick="offsetWeek(-1)">&larr;</button>
+            <button onclick="offsetWeek(1)">&rarr;</button>
             <div id="termine">
-                <h1>Hier ist eine Baustelle <i class="fas fa-wrench"></i></h1>
-                <img src="sources/UNDER_CONSTRUCTION.png" alt="Baustelle">
+                <div class="tg-wrap">
+                    <table class="tg">
+                        <thead>
+                            <tr>
+        
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tg-0lax"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -213,6 +227,7 @@
         <script src="js/corona-api.js"></script>
         <script src="js/weather-api.js"></script>
         <script type="module" src="js/StockdataviaHttpClient.js"></script>
+        <script type="module" src="/js/scedule_loader.js"></script>
 
     </body>
 </html>
