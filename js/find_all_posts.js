@@ -8,18 +8,17 @@ async function main(){
     const client = new MongoClient(uri);
     try{
         await client.connect();
+
         await findLastPosts(client);
 
-    }
-    catch (e){console.error(e);}
-    finally{
+    }catch (e){
+        console.error(e);
+    }finally{
         await client.close();
     }
 }
 
 main().catch(console.error);
-
-
 
 async function findLastPosts(client){
     const cursor = await client.db("WebPosts").collection("posts").find();

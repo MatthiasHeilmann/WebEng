@@ -13,9 +13,9 @@ async function main(){
 
         await createPost(client,{User:user_name, post:post_content})
 
-    }
-    catch (e){console.error(e);}
-    finally{
+    }catch (e){
+        console.error(e);
+    }finally{
         await client.close();
     }
 }
