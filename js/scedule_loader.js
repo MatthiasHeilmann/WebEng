@@ -4,7 +4,7 @@ const sceduleAPI = 'https://vorlesungsplan.dhbw-mannheim.de/ical.php';
 var sceduleAPIParams = '?date=';
 
 loadScedule();
-
+console.log(window.innerWidth);
 async function loadScedule(){
     // temporär bis man den scheiß mit Cors gefixt hat. 
     // Schaltet ne CORS-Anywhere Demo als Origin für den API aufruf zwischen
@@ -105,11 +105,18 @@ function getSceduleTabel(sceduleICS, offset){
             }
         }
     }
+
+    document.getElementById('scedule-table').style.display="";
+    document.getElementById('loading-scedule').style.display="none";
+    document.getElementById('loading-scedule-loader').style.display="none";
 }
 
 function offsetWeek(weekoffset){
-    weekoffset = parseInt(sessionStorage.getItem("weekOffset")) + weekoffset;
-    sessionStorage.setItem("weekOffset", weekoffset);
+    if(weekoffset !== 0){
+        weekoffset = parseInt(sessionStorage.getItem("weekOffset")) + weekoffset;
+        sessionStorage.setItem("weekOffset", weekoffset);
+    }
+
     getSceduleTabel(null, weekoffset);
 }
 
