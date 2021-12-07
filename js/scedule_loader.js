@@ -79,7 +79,7 @@ function getSceduleTabel(sceduleICS, offset){
         // Get all sceduled lessons for the current day of the week
         var currScedule = sceduleContentJson[iDay.toJSON().slice(0,10).replace(/-/g,'')];
         // Only if the current day has any information
-        if(currScedule){
+        if(currScedule || (iDay.getDay() > 0 && iDay.getDay() < 6)){
             // Inster header containing the current day ("day", DD.MM)
             var theadTh = document.createElement('th');
             theadTh.setAttribute('class', 'tg-ul38');
@@ -109,10 +109,10 @@ function getSceduleTabel(sceduleICS, offset){
                 location.setAttribute('class', 'lesson-location');
                 time.setAttribute('class', 'lesson-time');
 
-                var timeText = parseTime(currScedule[j]?.time.begin) + "-" + parseTime(currScedule[j]?.time.end);
+                var timeText = parseTime(currScedule?.[j]?.time.begin) + "-" + parseTime(currScedule?.[j]?.time.end);
 
-                summary.innerHTML = currScedule[j]?.summary || "";
-                location.innerHTML = currScedule[j]?.location || "";
+                summary.innerHTML = currScedule?.[j]?.summary || "";
+                location.innerHTML = currScedule?.[j]?.location || "";
                 time.innerHTML = timeText === "-"? "" : timeText;
                 
                 textWrapper.appendChild(summary);
