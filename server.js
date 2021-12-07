@@ -15,23 +15,22 @@ server.listen(port, function(){
 app.use(express.static(__dirname));
 
 // Test
-app.use(express.json());
+//app.use(express.json());
 
 app.get('/' , (req, res) => {
     res.sendFile(__dirname + '/main.html');
 });
 
-/*
-app.get('/mongoTest', (rep, res) => {
-    res.sendFile('/mongoTest.html');
-});
-*/
+app.get('/mongoGet',async (req, res) => {
+    res.json(await findPosts());
 
-app.post('/mongoUpload', (req, res) => {
-    // Upload req.body to mongoDB 
 });
 
-async function main(){
+app.post('/mongoPost', (req, res) => {
+    console.log("Got: " + req);
+});
+
+async function sendPost(post){
 
     const uri = "mongodb+srv://webeng:ai21@cluster0.utsfr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
@@ -39,7 +38,7 @@ async function main(){
     try{
         await client.connect();
 
-        await findLastPosts(client);
+        await createPost(client,post)
 
     }catch (e){
         console.error(e);
@@ -48,15 +47,44 @@ async function main(){
     }
 }
 
-main().catch(console.error);
+async function createPost(client, newListing){
+    try{
+        const result = await client.db("WebPosts").collection("posts").insertOne(newListing);
+        console.log("The Message has been posted: " + result);
+    }catch (e){
+        console.error(e);
+    }
 
-async function findLastPosts(client){
+}
+
+async function findPosts(){
+    
+    const uri = "mongodb+srv://webeng:ai21@cluster0.utsfr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    
+    const client = new MongoClient(uri);
+    var retPosts = {"data": []};
+    try{
+        await client.connect();
+
+        retPosts["data"] = await findAllPosts(client);
+    }catch (e){
+        console.error(e);
+    }finally{
+        await client.close();
+    }
+
+    return retPosts;
+}
+
+
+async function findAllPosts(client){
     const cursor = await client.db("WebPosts").collection("posts").find();
     const results = await cursor.toArray();
     if(results){
         console.log("Found results");
-        console.log(results);
+        return results;
     }else{
         console.log("nope");
+        return null;
     }
 }
