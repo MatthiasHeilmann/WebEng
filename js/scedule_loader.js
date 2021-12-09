@@ -25,9 +25,15 @@ function getSceduleTabel(sceduleICS, offset){
     // Gets the whole scedule information as a JSON array indexed by dates (YYYYMMDD)
     var sceduleContentJson;
     if(sceduleICS){
-        sceduleContentJson = parseJSON(sceduleICS);
-        sessionStorage.setItem("sceduleJson", JSON.stringify(sceduleContentJson));
-        sessionStorage.setItem("weekOffset", 0);
+        if(sceduleICS == sessionStorage.getItem("sceduleICS")){
+            sceduleContentJson = JSON.parse(sessionStorage.getItem("sceduleJson"));
+        }
+        else{
+            sceduleContentJson = parseJSON(sceduleICS);
+            sessionStorage.setItem("sceduleJson", JSON.stringify(sceduleContentJson));
+            sessionStorage.setItem("sceduleICS", sceduleICS);
+            sessionStorage.setItem("weekOffset", 0);
+        }
     }
     else{
         sceduleContentJson = JSON.parse(sessionStorage.getItem("sceduleJson"));

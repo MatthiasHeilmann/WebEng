@@ -8,7 +8,7 @@ async function uploadToMongo(){
     var jsonData = {name, data};
     console.log(`Sending: name:${name}, data:${data}`);
 
-    if(data === ""){
+    if(data === "" || name===""){
         alert("Invalid data");
         return;
     }
