@@ -2,7 +2,7 @@ async function uploadToMongo(){
     var name = document.getElementById('name-input').value;
     var data = document.getElementById('blackboard').value;
     var jsonData = {name, data};
-    console.log("Sending: " + data);
+    console.log(`Sending: name:${name}, data:${data}`);
 
     if(data === ""){
         alert("Invalid data");
