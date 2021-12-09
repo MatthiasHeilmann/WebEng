@@ -20,7 +20,7 @@ async function uploadToMongo(){
 }
 
 async function loadFromMongo(){
-    console.log("Fetching mogno: ");
+    console.log("Fetching mongo: ");
     var res = await fetch('/mongoGet');
     console.log(await res.json());
     console.log("Fetching done: ");
