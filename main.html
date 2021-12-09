@@ -206,12 +206,12 @@
                         <form>
                             <textarea id="blackboard" class="input_text" tabindex="1" placeholder="Teile eine Neuigkeit!" maxlength="1000"></textarea>
                             <p id="chars-p"><span id="chars">1000</span> characters remaining</p>
-                            <ul id="aktuelles-name">
+                            <ul id="ul-name">
                                 <li>
                                     <p id="name-p">Dieser Name wird angezeigt,<br> wenn du etwas postest:</p>
                                 </li>
                                 <li>
-                                    <input class="input_text" type="text" name ="name" tabindex="2" placeholder="Name" min="1" maxlength="30"><br>
+                                    <input id="name-input" class="input_text" type="text" name ="name" tabindex="2" placeholder="Name" min="1" maxlength="30"><br>
                                 </li>
                             </ul>
                             <input class="button" type="button" value="Teilen" tabindex="3" onclick="uploadToMongo()">

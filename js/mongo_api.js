@@ -1,13 +1,20 @@
 async function uploadToMongo(){
+    var name = document.getElementById('name-input').value;
     var data = document.getElementById('blackboard').value;
+    var jsonData = {name, data};
     console.log("Sending: " + data);
-    
+
+    if(data === ""){
+        alert("Invalid data");
+        return;
+    }
+
     const response = await fetch('/mongoPost', {
         method: 'POST',
         headers: {
-          'Content-Type': 'text/plain'
+            "Content-Type" : "application/json"
         },
-        json: JSON.parse(data)
+        body: JSON.stringify(jsonData)
     }); 
     
 }

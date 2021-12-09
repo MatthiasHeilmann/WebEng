@@ -1,3 +1,4 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 const http = require('http')
@@ -15,7 +16,7 @@ server.listen(port, function(){
 app.use(express.static(__dirname));
 
 // Test
-//app.use(express.json());
+app.use(bodyParser.json());
 
 app.get('/' , (req, res) => {
     res.sendFile(__dirname + '/main.html');
@@ -23,11 +24,11 @@ app.get('/' , (req, res) => {
 
 app.get('/mongoGet',async (req, res) => {
     res.json(await findPosts());
-
 });
 
 app.post('/mongoPost', (req, res) => {
-    console.log("Got: " + req);
+    console.log("Got: " + JSON.stringify(req.body));
+    sendPost(JSON.stringify(req.body));
 });
 
 async function sendPost(post){
@@ -37,7 +38,7 @@ async function sendPost(post){
     const client = new MongoClient(uri);
     try{
         await client.connect();
-
+    
         await createPost(client,post)
 
     }catch (e){
@@ -49,8 +50,8 @@ async function sendPost(post){
 
 async function createPost(client, newListing){
     try{
-        const result = await client.db("WebPosts").collection("posts").insertOne(newListing);
-        console.log("The Message has been posted: " + result);
+        const result = await client.db("WebPosts").collection("posts").insertOne(JSON.parse(newListing));
+        console.log("The Message has been posted: " + JSON.stringify(result));
     }catch (e){
         console.error(e);
     }
