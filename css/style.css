@@ -606,11 +606,10 @@ footer p{
     #notizen{
         margin:auto;
     }
-    }
     #chars-p{
         text-align: center;
     }
-
+}
 /* HANDY */
 
 @media screen and (max-width:700px){
