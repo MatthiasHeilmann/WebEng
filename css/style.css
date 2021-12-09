@@ -558,9 +558,6 @@ footer p{
         -o-transform: scale(1);
         box-shadow: 4px 10px 10px 10px rgba(0, 0, 0, 0.3);
     }
-    #weather-api-icon{
-        display: none;
-    }
     #weather-report{
         margin-right: 0;
     }
@@ -609,8 +606,10 @@ footer p{
     #notizen{
         margin:auto;
     }
-
-}
+    }
+    #chars-p{
+        text-align: center;
+    }
 
 /* HANDY */
 
