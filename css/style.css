@@ -377,7 +377,7 @@ span.tmax{
 }
 textarea{
     font-size: 15px;
-    margin-bottom: 10px;
+    margin: 0;
     border-radius: 2px;
     border: 2px solid;
     border-color: #494949;
@@ -408,7 +408,12 @@ form textarea{
 ::-moz-placeholder{color: #999999;}
 :-ms-input-placeholder{color: #999999;}
 :-moz-placeholder{color: #999999;}
-
+#chars-p{
+    text-align: right;
+    font-size: 12px;
+    color: #999999;
+    margin:0 10px 10px 0;
+}
 .button{
     background-color: #f0f0f0;
     color: #494949;

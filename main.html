@@ -204,16 +204,17 @@
                     <li>
                         <h1>Teile Etwas! <i class="fas fa-share-alt"></i></h1>
                         <form>
-                            <textarea id="blackboard" class="input_text" tabindex="2" placeholder="Teile eine Neuigkeit!" maxlength="1024"></textarea>
+                            <textarea id="blackboard" class="input_text" tabindex="1" placeholder="Teile eine Neuigkeit!" maxlength="1000"></textarea>
+                            <p id="chars-p"><span id="chars">1024</span> characters remaining</p>
                             <ul id="aktuelles-name">
                                 <li>
                                     <p id="name-p">Dieser Name wird angezeigt,<br> wenn du etwas postest:</p>
                                 </li>
                                 <li>
-                                    <input class="input_text" type="text" name ="name" tabindex="1" placeholder="Name" min="1"><br>
+                                    <input class="input_text" type="text" name ="name" tabindex="2" placeholder="Name" min="1" maxlength="30"><br>
                                 </li>
                             </ul>
-                            <input class="button" type="button" value="Teilen" onclick="uploadToMongo()">
+                            <input class="button" type="button" value="Teilen" tabindex="3" onclick="uploadToMongo()">
                         </form>
                     </li>
                     <li>
@@ -258,6 +259,7 @@
         <script src="js/weather-api.js"></script>
         <script type="module" src="js/StockdataviaHttpClient.js"></script>
         <script src="/js/scedule_loader.js"></script>
+        <script src="js/char-count.js"></script>
 
     </body>
 </html>
