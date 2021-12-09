@@ -30,7 +30,7 @@
                     <a href="#standort"><li>Standort</li></a>
                     <a href="#dhbw-section"><li><span style="color:#eb1b2a;">DH</span>BW</li></a>
                     <a href="#termine-section"><li>Termine</li></a>
-                    <a href="#notizen-section"><li>Notizen</li></a>
+                    <a href="#notizen-section"><li>Aktuelles</li></a>
                 </ul>
             </nav>
         </header>
@@ -140,7 +140,7 @@
                         </div>
                         <div id="partner-div">
                             <h1 id="partner-h1">Die Partner <i class="far fa-handshake"></i></h1>
-                            <p id="partner-p">Hier könnten Fakten über die Partner der DHBW Mannheim stehen.<br/>Wer mir verraten kann wie man die Texte hier in den divs linksbünding machen kann, obwohl die Überschrift und alles andere zentiert ist, bekommt von mir nen Döner.</p>
+                            <p id="partner-p">Hier könnten Fakten über die Partner der DHBW Mannheim stehen.<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
                         </div>
                     </li>
                     <!--SPALTE 2-->
@@ -196,28 +196,36 @@
         <!--notizen--------------------------------->
 
         <section id="notizen-section">
-            <h3>Schwarzes Brett <i class="fas fa-clipboard"></i></h3>
+            <h3>Aktuelles <i class="far fa-newspaper"></i></h3>
             <hr>
-
-            <h1>Hier ist eine Baustelle <i class="fas fa-wrench"></i></h1>
             <div id="notizen">
                 <ul>
                     <li>
+                        <h1>Teile Etwas! <i class="fas fa-share-alt"></i></h1>
                         <form>
-                            <textarea id="blackboard" class="input_text" tabindex="1" placeholder="Schwarzes Brett"></textarea>
-                            <input class="button" type="button" value="Speichern" onclick="uploadToMongo()">
+                            <textarea id="blackboard" class="input_text" tabindex="2" placeholder="Teile eine Neuigkeit!" maxlength="1024"></textarea>
+                            <ul id="aktuelles-name">
+                                <li>
+                                    <p id="name-p">Dieser Name wird angezeigt,<br> wenn du etwas postest:</p>
+                                </li>
+                                <li>
+                                    <input class="input_text" type="text" name ="name" tabindex="1" placeholder="Name" min="1"><br>
+                                </li>
+                            </ul>
+                            <input class="button" type="button" value="Teilen" onclick="uploadToMongo()">
                         </form>
                     </li>
                     <li>
-                        <div class="bubble bubble-bottom-left" >
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                            </br>- <cite>Matthias Heilmann</cite>
-                        </div>
-                        <div class="bubble bubble-bottom-left" >
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                            </br>- <cite>Stefan Raab</cite>
-                        </div>
-                        
+                        <h1>Schwarzes Brett <i class="fas fa-clipboard"></i></h1>
+                        <div class="scroll">
+                            <div class="bubble bubble-bottom-left" >
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                                </br><cite>- Matthias Heilmann</cite>
+                            </div>
+                            <div class="bubble bubble-bottom-left" >
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                </br><cite>- Stefan Raab</cite>
+                            </div>
                         </div>
                     </li>
                 </ul>
