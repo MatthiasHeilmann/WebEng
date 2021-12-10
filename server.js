@@ -51,7 +51,7 @@ async function sendPost(post){
 async function createPost(client, newListing){
     try{
         const result = await client.db("WebPosts").collection("posts").insertOne(JSON.parse(newListing));
-        console.log("The Message has been posted: " + resulst);
+        console.log("The Message has been posted: " + result);
     }catch (e){
         console.error(e);
     }
