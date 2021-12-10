@@ -376,7 +376,7 @@ span.tmax{
 #notizen ul li{
     width: 50%;
     float: left;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 #name-p{
     font-size: 17px;
@@ -386,6 +386,7 @@ span.tmax{
 #ul-name li{
     width: 50%;
     float: left;
+    margin-bottom: 0;
 }
 textarea{
     font-size: 15px;

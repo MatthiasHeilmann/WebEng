@@ -4,7 +4,8 @@ async function uploadToMongo(){
     
     document.getElementById("blackboard").value='';
     document.getElementById("name-input").value='';
-    document.getElementById("chars").value='';
+    $('#chars').text("1000");
+    $('#chars-name').text("30");
 
     var jsonData = {name, data};
     console.log(`Sending: name:${name}, data:${data}`);
