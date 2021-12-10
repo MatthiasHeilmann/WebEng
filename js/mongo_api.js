@@ -4,6 +4,7 @@ async function uploadToMongo(){
     
     document.getElementById("blackboard").value='';
     document.getElementById("name-input").value='';
+    document.getElementById("chars").value='';
 
     var jsonData = {name, data};
     console.log(`Sending: name:${name}, data:${data}`);
@@ -25,6 +26,7 @@ async function uploadToMongo(){
 loadFromMongo();
 
 async function loadFromMongo(){
+    
     console.log("Fetching mongo: ");
     var res = await fetch('/mongoGet');
     var res2 = await res.json();
@@ -44,4 +46,9 @@ async function loadFromMongo(){
         document.getElementById("scroll-id").appendChild(div);
     }
     document.getElementById("loading-blackboard-loader").style.display="none";
+}
+
+function refresh_board(){
+    console.log("refreshing board...");
+    loadFromMongo();
 }

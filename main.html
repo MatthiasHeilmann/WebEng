@@ -18,7 +18,7 @@
 
         <header>
             <div id="logo">
-                <a href="https://www.mannheim.dhbw.de/startseite" target="_blank">
+                <a href="#home">
                     <img src="sources/DHBW_MA_Logo02.png" alt="logo">
                 </a>
             </div>
@@ -212,7 +212,7 @@
                                     <p id="name-p">Dieser Name wird angezeigt,<br> wenn du etwas postest:</p>
                                 </li>
                                 <li>
-                                    <input id="name-input" class="input_text" type="text" name ="name" tabindex="2" placeholder="Name" min="1" maxlength="30"><br>
+                                    <input id="name-input" class="input_text" type="text" name ="name" tabindex="2" placeholder="Name" min="1" maxlength="30"></br>
                                     <p id="chars-name-p"><span id="chars-name">30</span> Zeichen übrig</p>
                                 </li>
                             </ul>
@@ -221,7 +221,8 @@
                     </li>
                     <li>
                         <h1>Schwarzes Brett <i class="fas fa-clipboard"></i></h1>
-                        <div class="scroll" id="scroll-id">
+
+                        <div class="scroll" id="scroll-id"> <!-- DIV MIT DEN NEUIGKEITEN -->
                             <div id="loading-blackboard-loader" class="loader"></div>
                         <!--<div class="bubble bubble-bottom-left" >
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
@@ -232,6 +233,8 @@
                                 </br><cite>- Stefan Raab</cite>
                             </div>-->
                         </div>
+
+                        <p id="sync_board"><i class="fas fa-sync-alt" onclick="refresh_board()"></i></p>
                     </li>
                 </ul>
             </div>
