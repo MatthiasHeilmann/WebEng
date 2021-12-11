@@ -8,6 +8,7 @@ loadScedule();
 async function loadScedule(){
     // temporär bis man den scheiß mit Cors gefixt hat. 
     // Schaltet ne CORS-Anywhere Demo als Origin für den API aufruf zwischen
+    //backup: var corsAPI = 'https://cors-anywhere.herokuapp.com/';  
     var corsAPI = 'http://localhost:8090/';   
     // Temporär bis ne Liste aller dates existiert (uids werden aus einer Datenbank gelesen)
     var tempAPI = 'http://vorlesungsplan.dhbw-mannheim.de/ical.php?uid=8320001'; 
