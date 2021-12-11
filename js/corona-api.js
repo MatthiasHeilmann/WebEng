@@ -75,34 +75,4 @@ var landkreisObjectId = '197';
             for(var i = 0; i < inzidenz7TageBL.length; i++) {
                 inzidenz7TageBL[i].innerHTML = Math.round((jsonLandkreis['cases7_bl_per_100k'] * 100)) / 100;
             }
-            // Faelle pro 100k Einwohner
-            var inzidenzLK= document.querySelectorAll('[id="anzeigeFaellePro100k"]');
-            for(var i = 0; i < inzidenzLK.length; i++) {
-                inzidenzLK[i].innerHTML = Math.round((jsonLandkreis['cases_per_100k'] * 100)) / 100;
-            }
-            // Letztes Update / Letzter Stand vom RKI bereitgestellt
-            var letztesUpdate= document.querySelectorAll('[id="anzeigeLetztesUpdate"]');
-            for(var i = 0; i < letztesUpdate.length; i++) {
-                letztesUpdate[i].innerHTML = jsonLandkreis['last_update'];
-            }
-            // Gesamtfaelle im Landkreis
-            var faelleLK = document.querySelectorAll('[id="anzeigeFaelleGesamt"]');
-            for(var i = 0; i < faelleLK.length; i++) {
-                faelleLK[i].innerHTML = jsonLandkreis['cases'];
-            }
-            // Todesfaelle im Landkreis
-            var sterbefaelle = document.querySelectorAll('[id="anzeigeFaelleTod"]');
-            for(var i = 0; i < sterbefaelle.length; i++) {
-                sterbefaelle[i].innerHTML = jsonLandkreis['deaths'];
-            }
-            // Sterberate im Landkreis
-            var sterberate = document.querySelectorAll('[id="anzeigeSterberate"]');
-            for(var i = 0; i < sterberate.length; i++) {
-                sterberate[i].innerHTML = (Math.round((jsonLandkreis['death_rate'] * 100)) / 100) + "%";
-            }
-            // Faelle bezogen auf Gesamtbevoelkerung 
-            var betroffenenrate = document.querySelectorAll('[id="anzeigeBetroffenenrate"]');
-            for(var i = 0; i < betroffenenrate.length; i++) {
-                betroffenenrate[i].innerHTML = Math.round((jsonLandkreis['cases_per_population'] * 100)) / 100;    
-            }
         });
