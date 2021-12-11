@@ -5,14 +5,14 @@ var datapoints=[[],[],[]];
 function convertdata(datensatz,index){
     let newdata=[];
     
-    for(var x in datensatz["Weekly Adjusted Time Series"])
+    for(var x in datensatz["Monthly Adjusted Time Series"])
     {
         alphabetize[index].push(x)
     }
     alphabetize[index].sort();
     //console.log(alphabetize);
     for(let i=0;i<alphabetize[index].length;i++){
-        newdata.push(datensatz["Weekly Adjusted Time Series"][alphabetize[index][i]]["5. adjusted close"])
+        newdata.push(datensatz["Monthly Adjusted Time Series"][alphabetize[index][i]]["5. adjusted close"])
     }
     //console.log(newdata);
     return newdata
@@ -35,9 +35,9 @@ var HttpClient = function() {
 //Instantiation of HttpClient & API Call RHO6.FRK=Roche, Max 5 calls per minute
 
 var client = new HttpClient();
-var StocksUrl1 = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=RHO6.FRK&apikey=61EK505FXBJ59YGC';
-var StocksUrl2 = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=DAI.FRK&apikey=61EK505FXBJ59YGC';
-var StocksUrl3 = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=FRE.FRK&apikey=61EK505FXBJ59YGC';
+var StocksUrl1 = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=RHO6.FRK&apikey=61EK505FXBJ59YGC';
+var StocksUrl2 = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=DAI.FRK&apikey=61EK505FXBJ59YGC';
+var StocksUrl3 = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=FRE.FRK&apikey=61EK505FXBJ59YGC';
 
 client.get(StocksUrl1, function(response) {
     var jsonfulldata = JSON.parse(response);
