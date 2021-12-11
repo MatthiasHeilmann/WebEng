@@ -7,6 +7,18 @@ const port = 8080;
 const MongoDB = require('mongodb').MongoDB;
 const { MongoClient } = require('mongodb');
 
+var host = process.env.HOST || '0.0.0.0';
+var corsport = process.env.PORT || 8090;
+var cors_proxy = require('cors-anywhere');
+cors_proxy.createServer({
+    originWhitelist: [], // Allow all origins
+    // requireHeader: ['origin', 'x-requested-with'],
+    // removeHeaders: ['cookie', 'cookie2']
+}).listen(corsport, host, function() {
+    console.log('Running CORS Anywhere on ' + host + ':' + '8090');
+});
+
+
 // Starten des Webservers
 server.listen(port, function(){
     // Hinweis ausgeben, dass der Webserver läuft
