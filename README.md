@@ -1,8 +1,8 @@
 # WebEng
 DHBW Dashboard
 
-Web Engineering Projekt TINF 21 AI 2 
-Studierende: 	Matthias Heilmann, Lorenz Müller, Sean Milan Schwarz, Louisa Woop
+Web Engineering Projekt TINF21AI2 
+Studierende: 	Matthias Heilmann, Lorenz Müller, Sean Milan Schwarz, Louisa Woop;
 Abgabe:		13.12.2021
 Präsentation:	14.12.2021
  
