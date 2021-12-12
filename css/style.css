@@ -301,7 +301,7 @@ span.tmax{
 }
 .tg {
     table-layout: fixed;
-    width: 80%;
+    width: 90%;
     border-collapse: collapse;
     border-spacing: 0;
     margin: 0px auto;
@@ -318,6 +318,7 @@ span.tmax{
     word-break: normal;
 }
 .tg th {
+    color: white;
     background-color: #eb1b2a;
     border-color: #6e7c84;
     border-style: solid;
