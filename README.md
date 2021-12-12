@@ -14,4 +14,4 @@ DHBW- Stundenplan:	https://vorlesungsplan.dhbw-mannheim.de/ical.php
 ICS-interpreter:	https://phpicalendar.net/ 
 Corona:			https://www.feuerwehr-gruenwald.de/covid19-ampel/#objectIdFinden
 Wetter API: 		https://openweathermap.org/api
-Wetter Zugang:		(Nutzername:webengai21project;Passwort:123456789;API-key:e543767cec1fc6ea03c70d7be741dcc7)
+API-key:  e543767cec1fc6ea03c70d7be741dcc7
