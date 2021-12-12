@@ -1,20 +1,18 @@
-//Function converts full JSON into list usable by chart.js
+//Variables used for the stock charts
 var datapoints=[[],[],[]];
-            var alphabetize=[[],[],[]];
-
+var alphabetize=[[],[],[]];
+//Function converts full JSON into list usable by chart.js
 function convertdata(datensatz,index){
-    let newdata=[];
-    
+    let newdata=[];   
     for(var x in datensatz["Monthly Adjusted Time Series"])
     {
         alphabetize[index].push(x)
     }
     alphabetize[index].sort();
-    //console.log(alphabetize);
-    for(let i=0;i<alphabetize[index].length;i++){
+    for(let i=0;i<alphabetize[index].length;i++)
+    {
         newdata.push(datensatz["Monthly Adjusted Time Series"][alphabetize[index][i]]["5. adjusted close"])
     }
-    //console.log(newdata);
     return newdata
 }
 
@@ -32,35 +30,28 @@ var HttpClient = function() {
     }
 }
 
-//Instantiation of HttpClient & API Call RHO6.FRK=Roche, Max 5 calls per minute
+//Instantiation of HttpClient & API Call RHO6.FRK=Roche, alphavantaage allows free users a Max of 5 calls per minute
 
 var client = new HttpClient();
 var StocksUrl1 = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=RHO6.FRK&apikey=61EK505FXBJ59YGC';
 var StocksUrl2 = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=DAI.FRK&apikey=61EK505FXBJ59YGC';
 var StocksUrl3 = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=FRE.FRK&apikey=61EK505FXBJ59YGC';
 
+//The following function gets as much of the data as the API will allow
+//The data is then put into convertdata(...) to make it comply with chart.js syntax
+
 client.get(StocksUrl1, function(response) {
     var jsonfulldata = JSON.parse(response);
-    //console.log(jsonfulldata)
     datapoints[0]= convertdata(jsonfulldata,0);
 
     client.get(StocksUrl2, function(response) {
         var jsonfulldata = JSON.parse(response);
-        //console.log(jsonfulldata)
         datapoints[1]= convertdata(jsonfulldata,1);
 
         client.get(StocksUrl3, function(response) {
             var jsonfulldata = JSON.parse(response);
-            //console.log(jsonfulldata)
             datapoints[2]= convertdata(jsonfulldata,2);
-            //console.log(datapoints)
-
-
-            //console.log(datapoints)
-            //console.log(datapoints[0])
-            //console.log(datapoints[1])
-            //setTimeout(() => console.log(datapoints), 3000);
-
+            
             const ctx = document.getElementById('myChart').getContext('2d');
             const myChart = new Chart(ctx, {
                 type: 'line',
@@ -107,7 +98,6 @@ client.get(StocksUrl1, function(response) {
                     }
                 }
             });
-            //console.log(myChart.data.datasets.data)
             });
 });
 });

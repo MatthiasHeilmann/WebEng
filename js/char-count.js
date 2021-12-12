@@ -1,3 +1,5 @@
+//The following code changes the number shown for the number of characters that are yet to be filled
+//before the user reaches the limit for the corresponding text box
 var maxLengthTextarea = 1000;
 var maxLengthName = 30;
 $('textarea').keyup(function() {
