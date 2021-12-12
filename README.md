@@ -1,46 +1,26 @@
 # WebEng
-Project WebEng2021 by Matthias Heilmann, Louisa Woop, Lorenz Mueller, Sean Milan Schwarz
+DHBW Dashboard
 
-IDEEN
-
-Kontaktspeicher -> Name, Hobbys, Gemeinsamkeiten, Gruppen, Kontaktdaten speichern
-Vibe Check
-Tippspiel
-DHBW Dashboard -> Wetterdaten, Stundenplanzeiten, Benutzer<->Fach/Kurs, Corona-Daten, 
-	       -> Tankstellenpreise, Aktienkurse von Partnerunternehmen (Roche,...)
-	       -> ÖPNV Warnungen, 
-Roche Mitfahrbörse -> Fahrgemeinschaften
-
-Projekt-E-Mail:	webengai21project@muellmail.com
+Web Engineering Projekt TINF21AI2 
+Studierende: 	Matthias Heilmann, Lorenz Müller, Sean Milan Schwarz, Louisa Woop;
+Abgabe:		13.12.2021
+Präsentation:	14.12.2021
+ 
+--------------------------------------------------------------------------
+Projekt-E-Mail:		webengai21project@muellmail.com
 Zugang:			https://muellmail.com/#/webengai21project@muellmail.com
-
-MongoDB Atlas Zugang: 	MatthiasHeilmann@hotmail.com
-						RocheAI21
-						(fragt mich nicht wies dazu gekommen ist...)
-
-Cluster0	|	Username: webeng	|	Password:	ai21
+--------------------------------------------------------------------------
+MongoDB Atlas Zugang: 	MatthiasHeilmann@hotmail.com	(fragt mich nicht wies dazu gekommen ist...)
+			RocheAI21
+Cluster0		Username: webeng; Password: ai21;
 Connection:		mongodb+srv://webeng:ai21@cluster0.utsfr.mongodb.net/test
-
-Symbole von fontawesome: https://fontawesome.com/
-
-APIs
-
-Stock APIs:
-https://www.alphavantage.co/
-
-Unser Stock API-Key: 61EK505FXBJ59YGC
-
-Tankstellen APIs:
-https://creativecommons.tankerkoenig.de/
-Duale Partner DHBW:
-https://www.dhbw-stuttgart.de/studium/liste-dualer-partner/
-DHBW- Stundenplan:
-https://vorlesungsplan.dhbw-mannheim.de/ical.php
-ICS-interpreter (Optional):
-https://phpicalendar.net/ 
-Corona Dashboard:
-https://covid-karte.de/#197
-Wetter API: (Nutzername:webengai21project;Passwort:123456789;API-key:e543767cec1fc6ea03c70d7be741dcc7)
-https://openweathermap.org/api
-ÖPNV-Daten:
-https://opendata.rnv-online.de/datahub-api 
+--------------------------------------------------------------------------
+Icons von fontawesome: https://fontawesome.com/
+--------------------------------------------------------------------------
+Stock APIs:		https://www.alphavantage.co/
+Unser Stock API-Key: 	61EK505FXBJ59YGC
+DHBW- Stundenplan:	https://vorlesungsplan.dhbw-mannheim.de/ical.php
+ICS-interpreter:	https://phpicalendar.net/ 
+Corona:			https://www.feuerwehr-gruenwald.de/covid19-ampel/#objectIdFinden
+Wetter API: 		https://openweathermap.org/api
+Wetter Zugang:		(Nutzername:webengai21project;Passwort:123456789;API-key:e543767cec1fc6ea03c70d7be741dcc7)

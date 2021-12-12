@@ -166,16 +166,16 @@
                     <li>
                         <div id="termin-container">
                             <div id="button-container" onselectstart="return false" ondragstart="return false;">
-                                <i class="fa fa-refresh" aria-hidden="true" onclick="loadScedule()"></i>
+                                <i class="fa fa-refresh" aria-hidden="true" onclick="loadSchedule()"></i>
                                 <i class="far fa-arrow-alt-circle-left" onclick="offsetWeek(-1)"></i>
                                 <i class="far fa-arrow-alt-circle-right" onclick="offsetWeek(1)"></i>
                                 <i class="fas fa-calendar-day" onclick="offsetWeek(0)"></i>
                             </div>
 
                             <div class="tg-wrap">
-                                <div id="loading-scedule">Termine werden geladen</div>
-                                <div id="loading-scedule-loader" class="loader"></div>
-                                <table id="scedule-table" class="tg" style="display: none;">
+                                <div id="loading-schedule">Termine werden geladen</div>
+                                <div id="loading-schedule-loader" class="loader"></div>
+                                <table id="schedule-table" class="tg" style="display: none;">
                                     <thead>
                                         <tr>
                                             
@@ -261,7 +261,7 @@
         <script src="js/corona-api.js"></script>
         <script src="js/weather-api.js"></script>
         <script type="module" src="js/StockdataviaHttpClient.js"></script>
-        <script src="/js/scedule_loader.js"></script>
+        <script src="/js/schedule_loader.js"></script>
         <script src="/js/mongo_api.js" defer></script>
         <script src="js/char-count.js"></script>
 
