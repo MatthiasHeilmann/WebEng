@@ -1,3 +1,5 @@
+var oldlength;
+
 async function uploadToMongo(){
     var name = document.getElementById('name-input').value;
     var data = document.getElementById('blackboard').value;
@@ -34,7 +36,8 @@ async function loadFromMongo(){
     console.log(res2);
     console.log("Fetching done: ");
     
-    res2length=res2.data.length;
+    var res2length=res2.data.length;
+    oldlength=res2length;
     for(var i=res2length-1;i>=0;i--){
         let div = document.createElement('div');
         div.classList.add('bubble');
@@ -50,7 +53,27 @@ async function loadFromMongo(){
     document.getElementById("loading-blackboard-loader").style.display="none";
 }
 
-function refresh_board(){
+async function refresh_board(){
     console.log("refreshing board...");
-    loadFromMongo();
+    
+    console.log("Fetching mongo: ");
+    var res = await fetch('/mongoGet');
+    var res2 = await res.json();
+    console.log(res2);
+    console.log("Fetching done: ");
+
+    var res2length=res2.data.length;
+    for(var i=res2length-1;i>=oldlength;i--){
+        let div = document.createElement('div');
+        div.classList.add('bubble');
+        div.classList.add('bubble-bottom-left');
+        let text = (res2.data[i].post || res2.data[i].data);
+        div.innerHTML=text+"</br>";
+        let cite = document.createElement('cite');
+        cite.innerHTML ="- "+ (res2.data[i].User || res2.data[i].name);
+        div.append(cite);
+
+        document.getElementById("scroll-id").prepend(div);
+    }
+    oldlength=res2length;
 }
