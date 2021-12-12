@@ -319,7 +319,8 @@ span.tmax{
 }
 .tg th {
     background-color: #eb1b2a;
-    border-color: #6e7c84;
+    border-color: black;
+    color: white;
     border-style: solid;
     border-width: 1px;
     font-family: Arial, sans-serif;
