@@ -34,7 +34,8 @@ async function loadFromMongo(){
     console.log(res2);
     console.log("Fetching done: ");
     
-    for(var i=0;i<res2.data.length;i++){
+    res2length=res2.data.length;
+    for(var i=res2length-1;i>=0;i--){
         let div = document.createElement('div');
         div.classList.add('bubble');
         div.classList.add('bubble-bottom-left');

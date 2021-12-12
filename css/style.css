@@ -466,11 +466,13 @@ form textarea{
     background: #f0f0f0;
     height: 350px;
     overflow-y: scroll;
+    overflow-x: hidden;
     width: 100%;
     border: 1px;
     padding: 10px;
     align-items: center;
-    
+    display: flex;
+    flex-direction: column-reverse;
     }
 
 .bubble {
