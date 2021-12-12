@@ -7,16 +7,7 @@ Abgabe:		13.12.2021
 Präsentation:	14.12.2021
  
 --------------------------------------------------------------------------
-Projekt-E-Mail:		webengai21project@muellmail.com
-Zugang:			https://muellmail.com/#/webengai21project@muellmail.com
---------------------------------------------------------------------------
-MongoDB Atlas Zugang: 	MatthiasHeilmann@hotmail.com	(fragt mich nicht wies dazu gekommen ist...)
-			RocheAI21
-Cluster0		Username: webeng; Password: ai21;
-Connection:		mongodb+srv://webeng:ai21@cluster0.utsfr.mongodb.net/test
---------------------------------------------------------------------------
-Icons von fontawesome: https://fontawesome.com/
---------------------------------------------------------------------------
+
 Stock APIs:		https://www.alphavantage.co/
 Unser Stock API-Key: 	61EK505FXBJ59YGC
 DHBW- Stundenplan:	https://vorlesungsplan.dhbw-mannheim.de/ical.php
